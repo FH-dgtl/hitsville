@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Oswald";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/oswald-v57-latin/oswald-v57-latin-700.woff2")
+    format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oswald-v57-latin/oswald-v57-latin-regular.woff2")
+    format("woff2");
+}
+
+:root {
+  --ff-serif: Courier, serif;
+  --ff-sans-serif: "Oswald";
+  --fs-responsive-xl: clamp(2rem, 1.6rem + 1.6vw, 3rem);
+  --fs-responsive-l: clamp(1.75rem, 1.45rem + 1.2vw, 2.5rem);
+  --fs-responsive-m: clamp(1.5rem, 1.3rem + 0.8vw, 2rem);
+  --fs-responsive-s: clamp(1rem, 0.8rem + 0.8vw, 1.5rem);
+
+  font-family: var(--ff-sans-serif);
+}
+
+.heading-xl,
+h2 {
+  font-size: var(--fs-responsive-xl);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.heading-l,
+h3 {
+  font-size: var(--fs-responsive-l);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.heading-m,
+h4 {
+  font-size: var(--fs-responsive-m);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.copv-s,
+p {
+  font-weight: 400;
+  font-size: clamp(1rem, 0.8rem + 0.8vw, 1.5rem);
+}
