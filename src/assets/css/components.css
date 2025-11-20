@@ -1,9 +1,11 @@
 @import url(components/marquee.css);
+@import url(components/teaser.css);
 
 .hero {
   display: grid;
   grid-template: "container";
   height: 100lvh;
+  overflow: clip;
 
   & > * {
     grid-area: container;
@@ -20,31 +22,7 @@
 
   svg {
     width: 100%;
-    filter: drop-shadow(
-      10px 10px 15px oklch(from var(--color-darkest) l c h / 0.9)
-    );
-  }
-}
-
-.teaser-list {
-  --teaser-list-gap: var(--spacing-s);
-  align-self: end;
-  align-items: end;
-  gap: var(--teaser-list-gap);
-  margin-block-end: 6rem;
-  display: flex;
-  flex-direction: column;
-
-  li {
-    background-color: var(--color-surface-opaque-80);
-    backdrop-filter: blur(20px);
-    padding: var(--spacing-s);
-    flex: 1;
-    border-block-start: var(--border-m);
-
-    & > * {
-      margin-block-start: 0;
-    }
+    filter: var(--filter-dropshadow);
   }
 }
 

@@ -10,3 +10,9 @@
     object-fit: cover;
   }
 }
+
+.hide-s {
+  @media (max-width: 460px) {
+    display: none;
+  }
+}

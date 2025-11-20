@@ -1,0 +1,128 @@
+.teaser-list {
+  --teaser-list-gap: var(--spacing-s);
+  align-self: end;
+  align-items: end;
+  gap: var(--teaser-list-gap);
+  display: flex;
+  flex-direction: column;
+  margin-block-end: 15vh;
+
+  & > * {
+    flex: 1;
+  }
+}
+
+.teaser {
+  border-block-start: var(--border-m);
+  background-color: var(--color-surface-opaque-80);
+  backdrop-filter: blur(20px);
+  padding: var(--spacing-s);
+  filter: var(--filter-dropshadow);
+
+  @media (max-width: 460px) {
+    transform: rotate(-15deg) translateX(10%);
+    background-color: var(--color-brand);
+    border: none;
+    padding: 2rem;
+    width: min-content;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+    clip-path: polygon(
+      99.15% 59.19%,
+      94.24% 62.59%,
+      96.62% 68.06%,
+      91.18% 70.5%,
+      92.51% 76.32%,
+      86.71% 77.72%,
+      86.95% 83.68%,
+      80.99% 83.99%,
+      80.13% 89.9%,
+      74.22% 89.11%,
+      72.29% 94.76%,
+      66.62% 92.89%,
+      63.68% 98.09%,
+      58.45% 95.22%,
+      54.61% 99.79%,
+      50% 96%,
+      45.39% 99.79%,
+      41.55% 95.22%,
+      36.32% 98.09%,
+      33.38% 92.89%,
+      27.71% 94.76%,
+      25.78% 89.11%,
+      19.87% 89.9%,
+      19.01% 83.99%,
+      13.05% 83.68%,
+      13.29% 77.72%,
+      7.49% 76.32%,
+      8.82% 70.5%,
+      3.38% 68.06%,
+      5.76% 62.59%,
+      0.85% 59.19%,
+      4.2% 54.24%,
+      0% 50%,
+      4.2% 45.76%,
+      0.85% 40.81%,
+      5.76% 37.41%,
+      3.38% 31.94%,
+      8.82% 29.5%,
+      7.49% 23.68%,
+      13.29% 22.28%,
+      13.05% 16.32%,
+      19.01% 16.01%,
+      19.87% 10.1%,
+      25.78% 10.89%,
+      27.71% 5.24%,
+      33.38% 7.11%,
+      36.32% 1.91%,
+      41.55% 4.78%,
+      45.39% 0.21%,
+      50% 4%,
+      54.61% 0.21%,
+      58.45% 4.78%,
+      63.68% 1.91%,
+      66.62% 7.11%,
+      72.29% 5.24%,
+      74.22% 10.89%,
+      80.13% 10.1%,
+      80.99% 16.01%,
+      86.95% 16.32%,
+      86.71% 22.28%,
+      92.51% 23.68%,
+      91.18% 29.5%,
+      96.62% 31.94%,
+      94.24% 37.41%,
+      99.15% 40.81%,
+      95.8% 45.76%,
+      100% 50%,
+      95.8% 54.24%
+    );
+  }
+}
+
+.teaser__content,
+.teaser__heading {
+  margin-block-start: 0;
+}
+
+.teaser__content {
+  &:is(ul) {
+    display: flex;
+    width: 100%;
+    gap: 0.5rem;
+
+    @media (max-width: 460px) {
+      gap: 0;
+      flex-direction: column;
+    }
+
+    li {
+      flex-shrink: 0;
+      font-size: clamp(1rem, 0.8rem + 0.8vw, 1.5rem);
+    }
+  }
+}

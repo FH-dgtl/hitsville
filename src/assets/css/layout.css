@@ -1,5 +1,5 @@
 :root {
-  --color-brand: red;
+  --color-brand: #ff8000;
   --color-darkest: #000;
   --color-lightest: #fff;
   --color-brand-80: oklch(from var(--color-brand) 0.8 c h);
@@ -9,6 +9,9 @@
   --color-text: light-dark(var(--color-darkest), var(--color-lightest));
   --color-surface: light-dark(var(--color-lightest), var(--color-darkest));
   --color-surface-opaque-80: oklch(from var(--color-surface) l c h / 0.8);
+  --filter-dropshadow: drop-shadow(
+    10px 10px 15px oklch(from var(--color-darkest) l c h / 0.9)
+  );
   --spacing-default: clamp(1rem, 0.2rem + 3.2vw, 3rem);
   --spacing-s: 1rem;
   --spacing-m: 1.5rem;
