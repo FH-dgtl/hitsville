@@ -1,4 +1,5 @@
 @import url(components/marquee.css);
+@import url(components/grid.css);
 @import url(components/teaser.css);
 
 .hero {
@@ -23,31 +24,5 @@
   svg {
     width: 100%;
     filter: var(--dropshadow);
-  }
-}
-
-.cells {
-  --cells-min-width: 20rem;
-  --cells-ratio: 4/3;
-  display: flex;
-  flex-wrap: wrap;
-
-  & > * {
-    flex: 1 1 var(--cells-min-width);
-    aspect-ratio: var(--cells-ratio);
-    overflow: hidden;
-  }
-}
-
-.cell--text {
-  display: flex;
-  flex-direction: column;
-  padding: var(--spacing-default);
-  align-items: center;
-  justify-content: center;
-
-  & > * {
-    margin-block-start: 0;
-    line-height: 1.5;
   }
 }
