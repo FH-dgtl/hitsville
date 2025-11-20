@@ -16,3 +16,9 @@
     display: none;
   }
 }
+
+[data-theme="invert"] {
+  --color-text: light-dark(var(--color-lightest), var(--color-darkest));
+  --color-surface: light-dark(var(--color-darkest), var(--color-lightest));
+  --color-link: light-dark(var(--color-brand-80), var(--color-brand-50));
+}

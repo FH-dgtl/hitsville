@@ -22,7 +22,7 @@
 
   svg {
     width: 100%;
-    filter: var(--filter-dropshadow);
+    filter: var(--dropshadow);
   }
 }
 

@@ -17,7 +17,7 @@
   background-color: var(--color-surface-opaque-80);
   backdrop-filter: blur(20px);
   padding: var(--spacing-s);
-  filter: var(--filter-dropshadow);
+  filter: var(--dropshadow);
 
   @media (max-width: 460px) {
     transform: rotate(-15deg) translateX(10%);

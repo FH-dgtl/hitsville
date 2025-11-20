@@ -4,12 +4,12 @@
   --color-lightest: #fff;
   --color-brand-80: oklch(from var(--color-brand) 0.8 c h);
   --color-brand-50: oklch(from var(--color-brand) 0.5 c h);
-  --color-link: var(--color-brand);
-  --color-hover: light-dark(var(--color-brand-50), var(--color-brand-80));
+  --color-hover: var(--color-brand);
+  --color-link: light-dark(var(--color-brand-50), var(--color-brand-80));
   --color-text: light-dark(var(--color-darkest), var(--color-lightest));
   --color-surface: light-dark(var(--color-lightest), var(--color-darkest));
   --color-surface-opaque-80: oklch(from var(--color-surface) l c h / 0.8);
-  --filter-dropshadow: drop-shadow(
+  --dropshadow: drop-shadow(
     10px 10px 15px oklch(from var(--color-darkest) l c h / 0.9)
   );
   --spacing-default: clamp(1rem, 0.2rem + 3.2vw, 3rem);
@@ -22,12 +22,6 @@
   color: var(--color-text);
 }
 
-[data-theme="invert"] {
-  --color-text: light-dark(var(--color-lightest), var(--color-darkest));
-  --color-surface: light-dark(var(--color-darkest), var(--color-lightest));
-  --color-hover: light-dark(var(--color-brand-80), var(--color-brand-50));
-}
-
 body {
   background-color: var(--color-surface);
 }
@@ -36,6 +30,7 @@ h1 {
   display: none;
 }
 
+button,
 a {
   color: var(--color-link);
   text-decoration: none;
@@ -52,7 +47,7 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   border: 2px solid var(--border-color);
-  color: var(--color-brand);
+
   &:focus-visible,
   &:hover {
     color: var(--color-hover);
