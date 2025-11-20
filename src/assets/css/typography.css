@@ -26,29 +26,29 @@
   font-family: var(--ff-sans-serif);
 }
 
-.heading-xl,
-h2 {
+h2,
+.heading-xl {
   font-size: var(--fs-responsive-xl);
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.heading-l,
-h3 {
+h3,
+.heading-l {
   font-size: var(--fs-responsive-l);
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.heading-m,
-h4 {
+h4,
+.heading-m {
   font-size: var(--fs-responsive-m);
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.copv-s,
-p {
+p,
+.copv-s {
   font-weight: 400;
   font-size: clamp(1rem, 0.8rem + 0.8vw, 1.5rem);
 }
