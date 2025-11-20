@@ -1,3 +1,5 @@
+@import url(components/marquee.css);
+
 .hero {
   display: grid;
   grid-template: "container";
@@ -21,42 +23,6 @@
     filter: drop-shadow(
       10px 10px 15px oklch(from var(--color-darkest) l c h / 0.9)
     );
-  }
-}
-
-.marquee {
-  --direction: forwards;
-  --duration: 50s;
-  --marquee-gap: 3rem;
-  align-self: end;
-  border-block: var(--border-m);
-  background-color: var(--color-surface-opaque-80);
-  overflow-x: auto;
-
-  &[data-animate="true"] {
-    overflow: hidden;
-
-    .marquee__inner {
-      animation: scroll var(--duration, 40s) var(--direction, forwards) linear
-        infinite;
-    }
-  }
-}
-
-.marquee__inner {
-  width: max-content;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--marquee-gap);
-
-  li {
-    font-style: italic;
-  }
-}
-
-@keyframes scroll {
-  to {
-    transform: translate(calc(-50% - (var(--marquee-gap) / 2)));
   }
 }
 
